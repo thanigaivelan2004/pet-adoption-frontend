@@ -14,6 +14,7 @@
     --darkGrey: #1F2130;
 }
 
+/* Base Styles for Navbar */
 .navbar-container {
     width: 100%;
     margin: 0 auto;
@@ -22,7 +23,70 @@
     align-items: center;
     padding: 20px 35px;
     background-color: rgb(239, 228, 106);
+    flex-wrap: wrap;
 }
+
+/* Style for Logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Style for Navbar Links */
+.navbar-links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    padding: 5px 0;
+}
+
+.Navbar-button {
+    padding: 8px 16px;
+    background-color: #f56b2a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;   /* Stack items vertically */
+        align-items: flex-start;  /* Align items to the left */
+        padding: 10px 20px;       /* Reduce padding */
+    }
+
+    .navbar-links {
+        flex-direction: column;   /* Stack links vertically */
+        gap: 10px;                /* Add space between items */
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .navbar-links li {
+        width: 100%;
+        text-align: left;
+    }
+
+    .Navbar-button {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+
 
 .navbar-logo {
     margin-left: 10px;
